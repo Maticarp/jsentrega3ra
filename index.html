@@ -1,47 +1,30 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tu Tienda</title>
+    <title>Carrito de Compras</title>
 </head>
 <body>
+    <h1>Carrito de Compras</h1>
+    <div>
+        <label for="producto">Producto:</label>
+        <input type="text" id="producto" placeholder="Nombre del producto">
+        <label for="precio">Precio:</label>
+        <input type="number" id="precio" placeholder="Precio del producto">
+        <button id="agregarProducto">Agregar Producto</button>
+    </div>
+    
+    <div>
+        <h2>Productos en el Carrito</h2>
+        <ul id="listaProductos"></ul>
+        <label for="buscarProducto">Buscar Producto:</label>
+        <input type="text" id="buscarProducto" placeholder="Nombre del producto a buscar">
+        <button id="buscar">Buscar</button>
+    </div>
 
-    <h1>Tu Tienda</h1>
+    <div id="mensajeError"></div>
 
-    <label for="producto">Nombre del producto:</label>
-    <input type="text" id="producto" placeholder="Nombre del producto">
+    <div id="total"></div>
 
-    <label for="precio">Precio:</label>
-    <input type="number" id="precio" placeholder="Precio">
-
-    <button id="agregarProducto">Agregar al Carrito</button>
-
-    <hr>
-
-    <label for="buscarProducto">Buscar producto en el carrito:</label>
-    <input type="text" id="buscarProducto" placeholder="Nombre del producto a buscar">
-
-    <button id="buscar">Buscar</button>
-
-    <hr>
-
-    <h2>Carrito de Compras</h2>
-    <ul id="listaProductos"></ul>
-
-    <p id="total">Total: $0</p>
-
-    <p id="resultadoBusqueda"></p>
-
-    <script>
-        const carritoKey = 'carrito';
-
-        // ... (tu código JavaScript aquí)
-
-        // Al cargar la página, mostrar el carrito actualizado
-        actualizarCarrito();
-        document.getElementById("total").textContent = "Total: $" + total.toFixed(2);
-    </script>
-
+    <script src="main.js"></script>
 </body>
 </html>
